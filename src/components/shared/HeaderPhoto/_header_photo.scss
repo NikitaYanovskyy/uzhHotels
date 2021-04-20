@@ -1,0 +1,31 @@
+.header_photo{
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0 150px 0;
+    color: #fff;
+    margin-bottom: 40px;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 105%;
+        height: 105%;
+        background: linear-gradient(111deg, $color2 0%, $color1 100%);
+        filter: blur(4px);
+        transform: translate(-5px, -8px);
+    }
+    h1{
+        font-size: 3.5em;
+    }
+    p{
+        font-size: 1.1em;
+        margin-top: 10px;
+        span{
+            padding: 2px 4px 4px 4px;
+            background-color: $color4;
+            color: $color1;
+        }
+    }
+}

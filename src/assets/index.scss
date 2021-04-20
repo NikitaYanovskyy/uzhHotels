@@ -1,0 +1,52 @@
+$color1: #EDAE49;
+$color2: #D1495B;
+$color3: #00798C;
+$color4: #30638E;
+$color5: #003D5B;
+@font-face {
+    font-family: Comic_Sans;
+    src: url('./fonts/Comic_Sans.ttf');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@import '../components/Navigation/navigation';
+@import '../components/shared/HeaderPhoto/header_photo';
+@import '../components/Landing/landing';
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+ul{
+    list-style: none;
+}
+.side_offset{
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+//Media queries
+@media (min-width: 768px) {
+    .side_offset {
+        width: 750px;
+        padding: 0;
+    }
+}
+@media (min-width: 1000px) {
+    .side_offset {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .side_offset {
+        width: 1170px;
+    }
+}
