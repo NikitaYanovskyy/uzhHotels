@@ -1,0 +1,83 @@
+.booking_title_block{
+    background: linear-gradient(111deg, $color2 0%, $color3 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+.booking_content_wrapper{
+    min-height: 100vh;
+}
+.booking_date_range, .booking_rooms_guests_amount, .booking_room_type{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.booking_inline_block.right_margin{
+    margin-right: 20px;
+}
+.general_price_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: $color1;
+    color: $color4;
+}
+.booking_details_label{
+    svg{
+        transform: translate(0, 4px);
+    }
+}
+.booking_flex_inputs_wrapper{
+    display: flex;
+    justify-content: space-between;
+    .input_wrapper.side_margin{
+            margin: 0 20px;
+    }
+    .input_wrapper.right_margin{
+        margin-right: 20px;
+    }
+}
+.form_section{
+    h1{
+        margin: 50px 0 10px 0;
+    }
+}
+.input_wrapper{
+    width: 100%;
+    label{
+        display: block;
+        margin-bottom: 5px;
+    }
+    input{
+        width: 100%;
+        border: 2px solid #000;
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+.booking_submit_btn{
+    margin: 20px 0;
+}
+
+
+@media screen and (max-width: 550px){
+    .general_price_wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .booking_details_label{
+        margin-top: 15px;
+    }
+    .booking_flex_inputs_wrapper{
+        flex-direction: column;
+        .input_wrapper.side_margin, .input_wrapper.right_margin{
+            margin: 10px 0 0 0;
+        }
+        .input_wrapper{
+            margin-top: 10px;
+        }
+    }
+}

@@ -1,13 +1,67 @@
+form{
+    input[type=submit]{
+        cursor: pointer;
+        background-color: $color1;
+        color: #fff;
+        padding: 10px;
+        &:hover{
+            background-color: $color3;
+        }
+    }
+}
+.form_required_label{
+    color: red;
+}
+.loader{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(111deg, $color2 0%, $color3 100%);
+    animation: loader 0.1s infinite;
+}
+@keyframes loader {
+    0%{
+        border-radius:0;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 0;
+    }
+}
 .landing_wrapper{
     display: flex;
-    .landing_search_card{
-        max-width: 300px;
+    color: $color5;
+    min-height: 90vh;
+    .landing_search_form_wrapper{
+        max-width: 250px;
         width: 100%;
-        height: 200px;
+        height: fit-content;
         position: sticky;
         top: 40px;
         margin-right: 40px;
-        background-color: #000;
+        padding: 20px;
+        border: 2px solid #000;
+        box-shadow: -8px 10px 0px 0px $color1;
+        .search_form_title{
+            margin-bottom: 20px;
+        }
+        .input_wrapper{
+            label{
+                display: block;
+                margin-bottom: 4px;
+                font-size: 0.9em;
+            }
+            input{
+                width: 100%;
+                padding: 2px;
+                margin-bottom: 10px;
+                border: 1px solid #000;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
     }
     .landing_search_results{
         width: 100%;
@@ -16,10 +70,11 @@
             margin-top: -5px;
         }
         .search_result_card{
-            border: 2px solid #000;
+            border: 2px solid $color5;
             padding: 20px;
             height: 250px;
             margin-bottom: 30px;
+            display: flex;
             img, .search_result_textblock{
                 float: left;
             }
@@ -27,12 +82,13 @@
                 display: inline-block;
                 object-fit: cover;
                 height: 100%;
-                max-width: 300px;
+                max-width: 250px;
                 margin-right: 20px;
             }
             .search_result_textblock{
                 display: inline-flex;
-                width: calc(100% - 320px);
+                flex-grow: 1;
+                //width: 100%;
                 height: 100%;
                 flex-direction: column;
                 justify-content: space-between;
@@ -42,16 +98,118 @@
                     .card_price_block{
                         text-align: right;
                         .card_price{
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
                         }
+                    }
+                    .card_person_icon{
+                        transform: translate(0, 2px);
+                    }
+                    .card_person_icon:nth-child(1){
+                        margin-left: 4px;
                     }
                 }
                 .textblock_bottom_part{
                     align-items: flex-end;
+                    p{
+                        margin-top: 5px;
+                    }
                 }
                 p{
                     font-size: 0.8em;
                 }
+            }
+        }
+    }
+}
+.card_button{
+    cursor: pointer;
+    background-color: $color5;
+    width: fit-content;
+    margin-left: auto;
+    color: $color4;
+    padding: 8px 6px;
+    &:hover{
+        background-color: $color3;
+    }
+}
+@media screen and (max-width: 1000px){
+    .landing_wrapper{
+        flex-direction: column;
+    }
+    .landing_search_form_wrapper{
+        max-width: 80% !important;
+        position: static !important;
+        margin: 0 auto 50px auto !important;
+    }
+    .landing_search_results{
+        width: 100%;
+        .search_result_items_amount{
+            margin-bottom: 10px;
+            margin-top: -5px;
+        }
+        .search_result_card{
+            img{
+                max-width: 150px !important;
+            }
+        }
+        .search_result_textblock{
+            width: calc(100% - 170px) !important;
+        }
+    }
+}
+@media screen and (max-width: 650px){
+    .textblock_sub_part{
+        flex-direction: column !important;
+    }
+    .landing_search_results{
+        .search_result_card{
+            img{
+                width: 50% !important;
+                max-width: unset !important;
+            }
+            height: 300px !important;
+            .search_result_textblock{
+                flex-grow: unset !important; 
+                .textblock_sub_part{
+                    .card_price_block{
+                        text-align: left !important;
+                        .card_price{
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .textblock_bottom_part{
+                    align-items: flex-start !important;
+                }
+            }
+        }
+    }
+    .card_button{
+        margin: unset;
+    }
+    .star_grade_wrapper{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .landing_search_results{
+        .search_result_card{
+            flex-direction: column;
+            height: fit-content !important;
+            img, .search_result_textblock{
+                float: unset !important;
+            }
+            img{
+                display: block !important; 
+                max-width: unset !important;
+                margin: 0 0 20px 0 !important;
+                width: 100% !important;
+                height: 70% !important;
+            }
+            .search_result_textblock{
+                display: block !important;
+                width: 100% !important;
             }
         }
     }

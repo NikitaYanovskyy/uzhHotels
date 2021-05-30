@@ -1,8 +1,15 @@
-$color1: #EDAE49;
-$color2: #D1495B;
-$color3: #00798C;
-$color4: #30638E;
-$color5: #003D5B;
+// $color1: #EDAE49;
+// $color2: #D1495B;
+// $color3: #00798C;
+// $color4: #30638E;
+// $color5: #003D5B;
+
+$color1: #000F08;
+$color2: #EDAE49;
+$color3: #D1495B;
+$color4: #F4FFF8;
+$color5: #011a0e;
+
 @font-face {
     font-family: Comic_Sans;
     src: url('./fonts/Comic_Sans.ttf');
@@ -15,15 +22,17 @@ $color5: #003D5B;
 @import '../components/Navigation/navigation';
 @import '../components/shared/HeaderPhoto/header_photo';
 @import '../components/Landing/landing';
-
-
-
+@import '../components/Hotel/hotel';
+@import '../components/Footer/footer';
+@import '../components/Booking/booking';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
+    border: none;
+    text-decoration: none;
 }
 ul{
     list-style: none;
@@ -32,7 +41,17 @@ ul{
     margin: 0 auto;
     padding: 0 1rem;
 }
-
+.submit_btn{
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 15px;
+    background-color: $color1;
+    color: $color4;
+    display: inline-block;
+    &:hover{
+        background-color: $color2;
+    }
+}
 //Media queries
 @media (min-width: 768px) {
     .side_offset {

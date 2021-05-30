@@ -1,9 +1,24 @@
-header{
-    padding: 15px 0;
-    background-color: $color4;
+nav{
+    background-color: $color1;
+    padding: 10px 0;
+    .side_offset{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     h1{
         transform: translate(0, -3px);
-        color: $color1;
+        color: $color4;
         font-family: Comic_Sans;
+    }
+    .canvas_wrapper{
+        position: relative;
+    }
+    .canvas_btn{
+        padding: 25px;
+        color: $color4;
+        &:hover{
+            background-color: $color3;
+        }
     }
 }

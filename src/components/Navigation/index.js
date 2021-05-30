@@ -2,11 +2,11 @@ import React from 'react';
 
 const Navigation = () =>{
     return(
-        <header>
+        <nav>
             <div className="side_offset">
                 <h1>Hotel.io</h1>
             </div>
-        </header>
+        </nav>
     )
 }
 
